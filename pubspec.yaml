@@ -1,0 +1,41 @@
+name: chansons_enfants
+description: "Une application Flutter pour explorer des chansons pour enfants."
+publish_to: 'none' # Empêche la publication accidentelle sur pub.dev
+
+version: 1.0.0+1 # Version initiale de l'application
+
+environment:
+  sdk: ^3.7.0 # Contrainte de version du SDK Flutter
+
+dependencies:
+  flutter:
+    sdk: flutter # Dépendance principale de Flutter
+  cupertino_icons: ^1.0.8 # Icônes iOS-style pour une compatibilité multiplateforme
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter # Outils de test pour Flutter
+  flutter_lints: ^5.0.0 # Linting pour maintenir un code propre
+  flutter_launcher_icons: ^0.13.1 # Pour générer des icônes personnalisées (optionnel)
+
+flutter:
+  uses-material-design: true # Active les icônes Material Design
+
+  # Déclaration des assets
+  assets:
+    - assets/fonts/ # Dossier contenant les polices
+    # - assets/images/ # Décommenter si tu ajoutes des images (ex. icône d'app)
+
+  # Configuration des polices personnalisées
+  fonts:
+    - family: PatrickHand
+      fonts:
+        - asset: assets/fonts/PatrickHand-Regular.ttf
+
+# Configuration pour flutter_launcher_icons (optionnel)
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/icon.png" # Chemin vers une image pour l'icône (à créer)
+  adaptive_icon_background: "#FFFFFF" # Fond pour Android adaptatif
+  adaptive_icon_foreground: "assets/images/icon.png" # Premier plan pour Android adaptatif
